@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Attendance</title>
+    <script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+    <h2>Face Attendance System</h2>
+
+    <video id="video" width="500" autoplay style="border:2px solid black;"></video>
+    <br><br>
+
+    <button onclick="captureImage()" style="padding:10px 20px; font-size:16px;">
+        Mark Attendance
+    </button>
+
+    <p id="result" style="margin-top:20px; font-weight:bold;"></p>
+
+</body>
+</html>

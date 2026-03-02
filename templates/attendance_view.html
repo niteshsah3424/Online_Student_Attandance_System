@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Records</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#142541;
+            margin:0;
+            padding:20px;
+        }
+
+        h2{
+            text-align:center;
+            color:#333;
+        }
+
+        .container{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .top-bar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:15px;
+        }
+
+        input[type=date]{
+            padding:6px;
+            border-radius:5px;
+            border:1px solid #ccc;
+        }
+
+        button{
+            padding:8px 14px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            color:white;
+            margin-left:5px;
+        }
+
+        .export{ background:#28a745; }
+        .clear{ background:#dc3545; }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:#082647;
+            color:white;
+            padding:10px;
+        }
+
+        td{
+            padding:10px;
+            border-bottom:1px solid #ddd;
+            text-align:center;
+        }
+
+        tr:hover{
+            background:#f1f1f1;
+        }
+
+        .delete-btn{
+            background:#ff4d4d;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>📋 Attendance Records</h2>
+
+<div class="container">
+
+    <div class="top-bar">
+
+        <form method="GET">
+            Filter by Date:
+            <input type="date" name="date">
+            <button type="submit">Filter</button>
+        </form>
+
+        <div>
+            <a href="/export-attendance">
+                <button class="export">Export CSV</button>
+            </a>
+
+            <a href="/clear-attendance">
+                <button class="clear">Clear All</button>
+            </a>
+        </div>
+
+    </div>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+
+        {% for row in records %}
+        <tr>
+            <td>{{ row[1] }}</td>  <!-- name -->
+            <td>{{ row[2] }}</td>  <!-- time -->
+            <td>{{ row[3] }}</td>  <!-- date -->
+            <td>
+                <a href="/delete-attendance/{{ row[0] }}">
+                    <button class="delete-btn">Delete</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>

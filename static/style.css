@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #0b0b0b;
+    color: rgb(245, 240, 240);
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px 0;
+}
+
+.main {
+    flex: 1;
+    background: #0b1b3b;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    padding: 15px 20px;
+    margin: 10px;
+    border: none;
+    background: gold;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: orange;
+}
+
+
+/* Register Page Styling */
+
+.register-body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.register-container {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #243b55;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 12px;
+    background: #243b55;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background: #141e30;
+}
+
+.back-btn {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #243b55;
+    font-weight: bold;
+}
+
+
+
+.alert {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Sidebar Links Color Fix */
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect (attractive bana deta hai) */
+.sidebar a:hover {
+    color: #ffd700;   /* Yellow glow */
+    padding-left: 8px;
+    transition: 0.3s;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camera Configuration</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg,#141e30,#243b55);
+            color:white;
+            text-align:center;
+        }
+
+        .box{
+            background:white;
+            color:black;
+            width:420px;
+            margin:80px auto;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        h2{
+            margin-bottom:20px;
+            color:#243b55;
+        }
+
+        select,button{
+            width:100%;
+            padding:12px;
+            margin-top:12px;
+            border-radius:6px;
+            border:none;
+            font-size:15px;
+        }
+
+        button{
+            background:#243b55;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#141e30;
+        }
+
+        a{
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>📷 Camera Configuration</h2>
+
+    <p>Select camera index</p>
+
+    <form method="POST">
+        <select name="cam_index">
+            <option value="0">Camera 0 (Default)</option>
+            <option value="1">Camera 1</option>
+            <option value="2">Camera 2</option>
+        </select>
+
+        <button type="submit">Save Camera</button>
+    </form>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Dashboard</button>
+    </a>
+
+</div>
+
+</body>
+</html>
